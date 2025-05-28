@@ -20,6 +20,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     background-color: transparent;
+    padding: 1rem;
     color: #dcdcdc;
     font-weight: 200;
     text-decoration: none;
@@ -67,6 +68,15 @@ body {
     pointer-events: none;
     z-index: -1;
 }
+/*####################################*/
+/*#########wrapper-divisivo##########*/
+/*####################################*/
+
+.wrapper-divisivo {
+    width: 100px;
+    height: 100px;
+}
+
 /*####################################*/
 /*#########primary-text##########*/
 /*####################################*/
