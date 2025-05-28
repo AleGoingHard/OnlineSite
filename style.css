@@ -1,0 +1,166 @@
+:root {
+    --site-background-color: #101820;
+    --title-color-white: white;
+    --font-sans-fallback:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+
+*{
+    font-family: var(--font-sans-fallback);
+    flex-direction: column;
+    overflow: auto;
+}
+body {
+    background-color: var(--site-background-color);  
+    color: var(--title-color-white);
+    transition: background-color 0.8s ease, color 0.5s ease;
+  }
+
+#site-header a{
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: transparent;
+    color: #dcdcdc;
+    font-weight: 200;
+    text-decoration: none;
+}
+#site-header a:hover {
+    color: white;
+    font-weight: 250;
+}
+
+/*####################################*/
+/*####################################*/
+/*******RAIN CONTAINER*********/
+/*####################################*/
+/*####################################*/
+
+#rain-container {
+    position: relative;
+    top: 50px;
+    left: 0; 
+    width: 100%; 
+    height: 600px; 
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden; 
+}
+#rain-container-text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    font-weight: 700;
+}
+#rain-container-coloredtext {
+    background: linear-gradient(to right, #5ac8d4, #c9bb37);
+    -webkit-background-clip: text;                  /**/
+    background-clip: text;                          /**/
+    color: transparent; 
+}
+.raindrop {
+    position: absolute;
+    width: 3px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), currentColor);
+    pointer-events: none;
+    z-index: -1;
+}
+/*####################################*/
+/*#########primary-text##########*/
+/*####################################*/
+#presentation-text {
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+
+/*####################################*/
+/*####################################*/
+/*#########infiniteCarousel##########*/
+/*####################################*/
+/*####################################*/
+
+.wrapper {
+    position: relative;
+    width: 70%;
+    max-width: 1536px;
+    height: 100px;
+    margin-inline: auto; /*serve per dare anche il margine sx*/
+    overflow: hidden;
+    
+
+    mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1)10%,
+    rgba(0,0,0,1)90%,
+    rgba(0,0,0,0));
+}
+.wrapper img {
+    filter: invert(0.85);
+  }
+  
+.item {
+    position: absolute;
+    height: 80px;
+    width: 70px;
+    left: max(calc(100px * 4), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes scrollLeft {
+    /*non c'è start{} perchè parte già da dx di default*/
+    to {
+        left: -200px;/*sarebbe fuori dal wrapper da sx*/
+    }
+}
+.item1 {
+    animation-delay: calc(10s / 4 * (4 - 1) * -1);/*quel 4 - x indica da dove parte sullo schermo*/
+}
+.item2 {
+    animation-delay: calc(10s / 4 * (4 - 2) * -1);
+}
+.item3 {
+    animation-delay: calc(10s / 4 * (4 - 3) * -1); 
+}
+.item4 {
+    animation-delay: calc(10s / 4 * (4 - 4) * -1);
+}
+
+
+/*####################################*/
+/*#########github-text##########*/
+/*####################################*/
+#github-text {
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*####################################*/
+/*####################################*/
+/*#########video##########*/
+/*####################################*/
+/*####################################*/
+#clickableVideo {
+    position: absolute;
+    height: 300px;
+    width: auto;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 1.3);
+}
+
+
+
+
