@@ -16,6 +16,15 @@ body {
     transition: background-color 0.8s ease, color 0.5s ease;
   }
 
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+
+/*******HEADER*********/
 #site-header a{
     flex-direction: row;
     justify-content: space-around;
