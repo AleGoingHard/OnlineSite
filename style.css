@@ -27,7 +27,6 @@ footer {
     justify-content: flex-start;
     text-align: center;
     padding: 30px 10%;
-    width: 100px;
 }
 
 
@@ -184,7 +183,7 @@ footer {
 /*####################################*/
 #clickableVideo {
     position: relative;
-    height: 300px;
+    height: 30rem;
     width: auto;
     display: flex;
     left: 50%;
