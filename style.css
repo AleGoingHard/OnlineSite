@@ -27,17 +27,23 @@ footer {
     justify-content: flex-start;
     text-align: center;
     padding: 30px 10%;
+    width: 100px;
 }
 
 
 /*******HEADER*********/
-#site-header a{
+#site-header {
     flex-direction: row;
+    display: flex;
     justify-content: space-around;
-    background-color: transparent;
-    padding: 1rem;
+
+}
+
+#site-header a{
+    background-color: transparent;    
     color: #dcdcdc;
     font-weight: 200;
+    padding: 1rem;
     font-size: 1.5rem;
     text-decoration: none;
 }
